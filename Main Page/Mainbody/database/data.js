@@ -16,8 +16,12 @@ const FlowerSchema = Schema({
   dprice:{type: Number},
   pprice:{type: Number},
   sprice:{type: Number},
+  deluxdescription:{type:String},
+  premiumdescription:{type:String},
+  productdescription:{type:String},
   productifo: {type: String},
-
+  rates: {type:Number},
+  reviews: {type: String}
 })
 
 const Flower = mongoose.model('Flower', FlowerSchema);
@@ -25,6 +29,7 @@ const Flower = mongoose.model('Flower', FlowerSchema);
 const UserSchema = Schema({
   username: {type: String, unique: true},
   email: {type: String, unique: true},
+  password: {type: String},
   token: {type: String}
 })
 
@@ -32,13 +37,14 @@ const User = mongoose.model('User', UserSchema);
 
 let save = (flower) => {  
   var store = new Flower({
-    image1: flower.image1,
-    image2: flower.image2,
-    image3: flower.image3,
-    dprice: flower.dprice,
-    pprice: flower.pprice,
-    sprice: flower.sprice,
-    productifo: flower.productifo
+    dprice: 14
+    // image1: flower.image1,
+    // image2: flower.image2,
+    // image3: flower.image3,
+    // dprice: flower.dprice,
+    // pprice: flower.pprice,
+    // sprice: flower.sprice,
+    // productifo: flower.productifo
   })
   store.save();
 }
