@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 
 
 app.get ('/', (req, res) => {
-  res.send('Hello from Header server');
+  res.send('Hello from topreviews server');
 });
 
 app.listen(process.env.PORT || 1500); 
