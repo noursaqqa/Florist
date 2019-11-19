@@ -10,18 +10,14 @@ db.once('open', function() {
 });
 
 const FlowerSchema = Schema({ //flower description schema
-  image1:{type: String}, 
-  image2:{type: String}, 
-  image3:{type: String},
+  image:{type: String}, 
   dprice:{type: Number},
   pprice:{type: Number},
   sprice:{type: Number},
   deluxdescription:{type:String},
   premiumdescription:{type:String},
   productdescription:{type:String},
-  productifo: {type: String},
-  rates: {type:Number},
-  reviews: {type: String}
+  productifo: {type: String}
 })
 
 const Flower = mongoose.model('Flower', FlowerSchema);
