@@ -10,6 +10,7 @@ db.once('open', function() {
 });
 
 const FlowerSchema = Schema({ //flower description schema
+  name:{type: String},
   image:{type: String}, 
   dprice:{type: Number},
   pprice:{type: Number},
@@ -24,6 +25,7 @@ const Flower = mongoose.model('Flower', FlowerSchema);
 
 let save = (flower) => {  
   var store = new Flower({
+    name: flower.name,
     image: flower.image,
     dprice: flower.dprice,
     pprice: flower.pprice,
@@ -56,6 +58,7 @@ let saveuser = (user) => {
 }
 
 const ShoppingSchema = Schema ({ //
+  name: {type: String},
   image:{type: String},
   name:{type: String},
   pricetype:{type: String},

@@ -7,12 +7,12 @@ import CardList from './components/CardList.jsx';
 
 class App extends Component {
     constructor(props) {
-        super();
+        super(props);
         this.state = {
             cards: []
         }
         //methods to bind
-        this.retrieveData();
+        
         this.updateState = this.updateState.bind(this);
 
     }
@@ -21,8 +21,17 @@ class App extends Component {
     updateState(data) {
         this.setState({
             cards: data
+             
         })
+        console.log('From update',this.state.cards);
     }
+
+    componentDidMount(){
+        
+        this.retrieveData();
+    }
+
+   
 
     retrieveData() {
         var that = this;

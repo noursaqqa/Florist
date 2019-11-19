@@ -16,9 +16,10 @@ app.get ('/', (req, res) => {
   res.send('Hello from Mainbody server');
 });
 
-app.get ('/flower', (req,res) => {
+app.get ('/cards', (req,res) => {
     db.Flower
           .find({})
+          .limit(16)
           .exec((err,data) => { 
         if(err){
           console.log(err);
