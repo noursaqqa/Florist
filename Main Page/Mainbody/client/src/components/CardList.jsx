@@ -1,40 +1,39 @@
 //class
-import React, { Component } from 'react'
+import React from 'react'
 import CardItem from './CardItem.jsx'
 
-class CardList extends Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {};
-    // }
+
+class CardList extends React.Component {
+    constructor(props) {
+        super(props);
+        // this.state = {};
+    }
 
     render() {
-        return(
+        // console.log('from cardlist render', this.props);
+        // var cards = [];
+        // if(this.props.cards.length !== 0) {
+        //     cards = this.props.cards;
+        // }
 
-            <div className="main-container">
-                <CardItem />
-                <CardItem />
-                <CardItem />
-                <CardItem />
+        // console.log('from cardlist render**',this.props.cards);
+        return (
+
+            <div className="main-container">             
+                {this.props.cards.map(card => {
+                    return <CardItem card={card}/>
+               })}
+                
+                
             </div>
 
-            // <div className="container-fluid d-flex justify-content-center">
-            //     <div className="row">
-            //         <div className="col-md-4">
-            //             <CardItem />
-            //         </div>
-            //         <div className="col-md-4">
-            //             <CardItem />
-            //         </div>
-                    
-            //         <div className="col-md-4">
-            //             <CardItem />
-            //         </div>
-            //     </div>
-            // </div>
+  
             
         );
     }
 }
+
+
+
 
 export default CardList;
