@@ -10,6 +10,7 @@ db.once('open', function() {
 });
 
 const FlowerSchema = Schema({ //flower description schema
+  name:{type: String},
   image:{type: String}, 
   dprice:{type: Number},
   pprice:{type: Number},
@@ -24,6 +25,7 @@ const Flower = mongoose.model('Flower', FlowerSchema);
 
 let save = (flower) => {  
   var store = new Flower({
+    name: flower.name,
     image: flower.image,
     dprice: flower.dprice,
     pprice: flower.pprice,
@@ -40,7 +42,7 @@ const UserSchema = Schema({ //a schema for the authentication purpose
   username: {type: String, unique: true},
   email: {type: String, unique: true},
   password: {type: String},
-  token: {type: String}
+  // token: {type: String}
 })
 
 const User = mongoose.model('User', UserSchema);
@@ -68,13 +70,13 @@ const ShoppingCart = mongoose.model('ShoppingCart', ShoppingSchema);
 
 let savecart = (receipt) => {  
   var cart = new ShoppingCart({
-    image: "nnnnnnnnn"
-    // image: receipt.image,
-    // name: receipt.name,
-    // pricetype: receipt.Pricetype,
-    // price: receipt.price,
-    // quantity: receipt.quantity,
-    // deliveryDate: receipt.deliveryDate
+    // image: "nnnnnnnnn"
+    image: receipt.image,
+    name: receipt.name,
+    pricetype: receipt.Pricetype,
+    price: receipt.price,
+    quantity: receipt.quantity,
+    deliveryDate: receipt.deliveryDate
   })
   cart.save();
 }
