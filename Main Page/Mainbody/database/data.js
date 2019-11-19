@@ -9,7 +9,7 @@ db.once('open', function() {
   console.log("We're Connected to database!");
 });
 
-const FlowerSchema = Schema({
+const FlowerSchema = Schema({ //flower description schema
   image1:{type: String}, 
   image2:{type: String}, 
   image3:{type: String},
@@ -26,7 +26,20 @@ const FlowerSchema = Schema({
 
 const Flower = mongoose.model('Flower', FlowerSchema);
 
-const UserSchema = Schema({
+let save = (flower) => {  
+  var store = new Flower({
+    image1: flower.image1,
+    image2: flower.image2,
+    image3: flower.image3,
+    dprice: flower.dprice,
+    pprice: flower.pprice,
+    sprice: flower.sprice,
+    productifo: flower.productifo
+  })
+  store.save();
+}
+
+const UserSchema = Schema({ //a schema for the authentication purpose
   username: {type: String, unique: true},
   email: {type: String, unique: true},
   password: {type: String},
@@ -35,27 +48,38 @@ const UserSchema = Schema({
 
 const User = mongoose.model('User', UserSchema);
 
-let save = (flower) => {  
-  var store = new Flower({
-    dprice: 14
-    // image1: flower.image1,
-    // image2: flower.image2,
-    // image3: flower.image3,
-    // dprice: flower.dprice,
-    // pprice: flower.pprice,
-    // sprice: flower.sprice,
-    // productifo: flower.productifo
-  })
-  store.save();
-}
-
 let saveuser = (user) => {  
   var buyer = new User({
   username: user.username,
   email: user.email,
+  password: user.password,
   token: user.token
   })
   buyer.save();
 }
 
-module.exports={Flower, User, save, saveuser};
+const ShoppingSchema = Schema ({ //
+  image:{type: String},
+  name:{type: String},
+  pricetype:{type: String},
+  price: {type: Number},
+  quantity: {type: Number},
+  deliveryDate: {type: Date},
+})
+
+const ShoppingCart = mongoose.model('ShoppingCart', ShoppingSchema);
+
+let savecart = (receipt) => {  
+  var cart = new ShoppingCart({
+    image: "nnnnnnnnn"
+    // image: receipt.image,
+    // name: receipt.name,
+    // pricetype: receipt.Pricetype,
+    // price: receipt.price,
+    // quantity: receipt.quantity,
+    // deliveryDate: receipt.deliveryDate
+  })
+  cart.save();
+}
+
+module.exports={Flower, User, save, saveuser, ShoppingCart, savecart};
