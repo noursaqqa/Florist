@@ -24,12 +24,13 @@ const Flower = mongoose.model('Flower', FlowerSchema);
 
 let save = (flower) => {  
   var store = new Flower({
-    image1: flower.image1,
-    image2: flower.image2,
-    image3: flower.image3,
+    image: flower.image,
     dprice: flower.dprice,
     pprice: flower.pprice,
     sprice: flower.sprice,
+    deluxdescription: flower.deluxdescription,
+    premiumdescription: flower.premiumdescription,
+    productdescription: flower.productdescription,
     productifo: flower.productifo
   })
   store.save();
