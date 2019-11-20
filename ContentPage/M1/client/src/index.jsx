@@ -5,8 +5,8 @@ class Flowers4001 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: "",
-      img: ""
+      image: "",
+      id:""
     };
   }
 
@@ -26,8 +26,8 @@ class Flowers4001 extends React.Component {
         console.log("dvdvdvdv");
         console.log(data);
         that.setState({
-          img: data.img,
-          id: data.id
+          image: data.image,
+          id: data._id
         });
       },
       error: function(request, status, error) {
@@ -114,7 +114,7 @@ class Flowers4001 extends React.Component {
           <img
             className=" nn"
             id="active-image_gallery-image"
-            src={this.state.img}
+            src={this.state.image}
           />
         </div>
       </div>

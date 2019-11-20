@@ -82,8 +82,8 @@
 	    var _this = _possibleConstructorReturn(this, (Flowers4001.__proto__ || Object.getPrototypeOf(Flowers4001)).call(this, props));
 	
 	    _this.state = {
-	      id: "",
-	      img: ""
+	      image: "",
+	      id: ""
 	    };
 	    return _this;
 	  }
@@ -106,8 +106,8 @@
 	          console.log("dvdvdvdv");
 	          console.log(data);
 	          that.setState({
-	            img: data.img,
-	            id: data.id
+	            image: data.image,
+	            id: data._id
 	          });
 	        },
 	        error: function error(request, status, _error) {
@@ -262,7 +262,7 @@
 	          _react2.default.createElement("img", {
 	            className: " nn",
 	            id: "active-image_gallery-image",
-	            src: this.state.img
+	            src: this.state.image
 	          })
 	        )
 	      );
