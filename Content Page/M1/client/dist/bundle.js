@@ -47,7 +47,7 @@
   \******************************/
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
@@ -65,84 +65,13 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // import React, { Component } from 'react';
-	// import ReactDOM from 'react-dom';
-	// import $ from 'jquery';
-	
-	// class Flowers4001 extends React.Component {
-	//   constructor(props) {
-	//     super(props);
-	//     this.state = {
-	//       id: "",
-	//       img : ""
-	//     }
-	//   }
-	
-	//   // retriveData() {
-	//   //   var that = this;
-	//   //   $.ajax({
-	//   //     type: "GET",
-	//   //     url: "/items",
-	//   //     success: function(data) {
-	//   //       console.log("dvdvdvdv");
-	//   //       that.setState({
-	//   //         flowerData : data[0]
-	//   //       });
-	//   //     },
-	//   //     error: function(request, status, error) {
-	//   //       console.log(error,"hi im the error");
-	//   //     }
-	//   //   });
-	//   // }
-	
-	//   componentDidMount() {
-	//     var that = this;
-	
-	//     var path = window.location.href;
-	//     var imgId = path.substring(path.indexOf("="+1));
-	//     if(imgId === " ") {
-	//       imgId = 1;
-	//     }
-	
-	//     console.log(imgId);
-	
-	//     $.ajax({
-	//       type: "GET",
-	//       url: "/items",
-	//       data:{id:imgId},
-	//       success: function(data) {
-	//         console.log("dvdvdvdv");
-	//         console.log(data[0].img);
-	
-	//         that.setState({
-	//           img : data[0].img,
-	//           id: data.id
-	//         });
-	//       },
-	//       error: function(request, status, error) {
-	//         console.log(error,"hi im the error");
-	//       }
-	//     });
-	
-	//   }
-	
-	
-	//   render() {
-	//     return (
-	//       <div>
-	//         <h1 class = "h1">helloo agaaiinn 4001!!</h1>
-	//          <img id="active-image_gallery-image" src={this.state.img}/>
-	//         </div>
-	
-	//     );
-	//   }
-	// }
-	// ReactDOM.render(<Flowers4001 />, document.getElementById("Flowers4001"));
-	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var Flowers4001 = function (_React$Component) {
 	  _inherits(Flowers4001, _React$Component);
@@ -158,26 +87,9 @@
 	    };
 	    return _this;
 	  }
-	  // retriveData() {
-	  //   var that = this;
-	  //   $.ajax({
-	  //     type: "GET",
-	  //     url: "/items",
-	  //     success: function(data) {
-	  //       console.log("dvdvdvdv");
-	  //       that.setState({
-	  //         flowerData : data[0]
-	  //       });
-	  //     },
-	  //     error: function(request, status, error) {
-	  //       console.log(error,"hi im the error");
-	  //     }
-	  //   });
-	  // }
-	
 	
 	  _createClass(Flowers4001, [{
-	    key: 'componentDidMount',
+	    key: "componentDidMount",
 	    value: function componentDidMount() {
 	      var that = this;
 	      var path = window.location.href;
@@ -204,110 +116,140 @@
 	      });
 	    }
 	  }, {
-	    key: 'render',
+	    key: "render",
 	    value: function render() {
+	      var _React$createElement;
+	
 	      console.log("hiiii");
 	      return _react2.default.createElement(
-	        'div',
+	        "div",
 	        null,
 	        _react2.default.createElement(
-	          'section',
-	          { id: '#header' },
+	          "section",
+	          { id: "#header" },
 	          _react2.default.createElement(
-	            'div',
-	            { className: 'row header-innerContainer ' },
+	            "div",
+	            { className: " clearfix company-logo companylogo-img col-xs-12 col-sm-4 col-md-4" },
 	            _react2.default.createElement(
-	              'div',
-	              { className: ' clearfix company-logo companylogo-img col-xs-12 col-sm-4 col-md-4' },
-	              _react2.default.createElement('img', { src: 'https://res.cloudinary.com/bloomnation/c_fit,f_auto,h_1000,q_auto,w_1000/v1/vendor/6263/profile/p/a/parkflorist-logo_2.png' })
-	            )
-	          ),
-	          " "
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'displayUl header-nav col-md-12' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'navigation ui-menu' },
+	              "span",
+	              null,
+	              "Park Florist",
+	              _react2.default.createElement("br", null),
+	              "2015 Macdonald Ave",
+	              _react2.default.createElement("br", null),
+	              "Richmond, CA 94801",
+	              _react2.default.createElement("br", null)
+	            ),
 	            _react2.default.createElement(
-	              'ul',
+	              "span",
+	              null,
+	              _react2.default.createElement("img", {
+	                id: "logoimg",
+	                src: "https://res.cloudinary.com/bloomnation/c_fit,f_auto,h_1000,q_auto,w_1000/v1/vendor/6263/profile/p/a/parkflorist-logo_2.png"
+	              })
+	            ),
+	            _react2.default.createElement(
+	              "span",
 	              null,
 	              _react2.default.createElement(
-	                'div',
-	                { className: 'displayUl' },
+	                "span",
+	                null,
+	                "My Account"
+	              ),
+	              _react2.default.createElement(
+	                "svg",
+	                (_React$createElement = {
+	                  xmlns: "http://www.w3.org/2000/svg"
+	                }, _defineProperty(_React$createElement, "xmlns", "xlink=\"http://www.w3.org/1999/xlink\""), _defineProperty(_React$createElement, "version", "1.1"), _defineProperty(_React$createElement, "width", "24"), _defineProperty(_React$createElement, "height", "24"), _defineProperty(_React$createElement, "viewBox", "0 0 24 24"), _React$createElement),
+	                _react2.default.createElement("path", { d: "M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z" })
+	              )
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          "div",
+	          { className: "displayUl header-nav col-md-12" },
+	          _react2.default.createElement(
+	            "div",
+	            { className: "navigation ui-menu" },
+	            _react2.default.createElement(
+	              "ul",
+	              null,
+	              _react2.default.createElement(
+	                "div",
+	                { className: "displayUl" },
 	                _react2.default.createElement(
-	                  'li',
-	                  { className: '.nav-itemWrapper' },
+	                  "li",
+	                  { className: ".nav-itemWrapper" },
 	                  _react2.default.createElement(
-	                    'span',
+	                    "span",
 	                    null,
-	                    'SHOP'
+	                    "SHOP"
 	                  )
 	                )
 	              ),
 	              _react2.default.createElement(
-	                'div',
-	                { className: 'displayUl' },
+	                "div",
+	                { className: "displayUl" },
 	                _react2.default.createElement(
-	                  'li',
-	                  { className: '.nav-itemWrapper' },
+	                  "li",
+	                  { className: ".nav-itemWrapper" },
 	                  _react2.default.createElement(
-	                    'span',
-	                    { className: 'nav-itemText' },
-	                    'BIRTHDAY'
+	                    "span",
+	                    { className: "nav-itemText" },
+	                    "BIRTHDAY"
 	                  )
 	                )
 	              ),
 	              _react2.default.createElement(
-	                'div',
-	                { className: 'displayUl' },
+	                "div",
+	                { className: "displayUl" },
 	                _react2.default.createElement(
-	                  'li',
-	                  { className: '.nav-itemWrapper' },
+	                  "li",
+	                  { className: ".nav-itemWrapper" },
 	                  _react2.default.createElement(
-	                    'span',
-	                    { className: 'nav-itemText' },
-	                    'SYMPATHY'
+	                    "span",
+	                    { className: "nav-itemText" },
+	                    "SYMPATHY"
 	                  )
 	                )
 	              ),
 	              _react2.default.createElement(
-	                'div',
-	                { className: 'displayUl' },
+	                "div",
+	                { className: "displayUl" },
 	                _react2.default.createElement(
-	                  'li',
-	                  { className: '.nav-itemWrapper' },
+	                  "li",
+	                  { className: ".nav-itemWrapper" },
 	                  _react2.default.createElement(
-	                    'span',
-	                    { className: 'nav-itemText' },
-	                    'OCASSION'
+	                    "span",
+	                    { className: "nav-itemText" },
+	                    "OCASSION"
 	                  )
 	                )
 	              ),
 	              _react2.default.createElement(
-	                'div',
-	                { className: 'displayUl' },
+	                "div",
+	                { className: "displayUl" },
 	                _react2.default.createElement(
-	                  'li',
-	                  { className: '.nav-itemWrapper' },
+	                  "li",
+	                  { className: ".nav-itemWrapper" },
 	                  _react2.default.createElement(
-	                    'span',
-	                    { className: 'nav-itemText' },
-	                    'CUSTOM ARRANGMENT'
+	                    "span",
+	                    { className: "nav-itemText" },
+	                    "CUSTOM ARRANGMENT"
 	                  )
 	                )
 	              ),
 	              _react2.default.createElement(
-	                'div',
-	                { className: 'displayUl' },
+	                "div",
+	                { className: "displayUl" },
 	                _react2.default.createElement(
-	                  'li',
-	                  { className: '.nav-itemWrapper' },
+	                  "li",
+	                  { className: ".nav-itemWrapper" },
 	                  _react2.default.createElement(
-	                    'span',
-	                    { className: 'nav-itemText' },
-	                    'ABOUT US'
+	                    "span",
+	                    { className: "nav-itemText" },
+	                    "ABOUT US"
 	                  )
 	                )
 	              )
@@ -315,9 +257,13 @@
 	          )
 	        ),
 	        _react2.default.createElement(
-	          'div',
-	          { className: 'photo' },
-	          _react2.default.createElement('img', { className: ' nn', id: 'active-image_gallery-image', src: this.state.img })
+	          "div",
+	          { className: "photo" },
+	          _react2.default.createElement("img", {
+	            className: " nn",
+	            id: "active-image_gallery-image",
+	            src: this.state.img
+	          })
 	        )
 	      );
 	    }
