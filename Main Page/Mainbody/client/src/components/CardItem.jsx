@@ -14,9 +14,10 @@ class CardItem extends React.Component  {
 
     render() {
         // console.log('from carditem', this.props);
-
+        // console.log('from render ', this.props.card._id)
+        var cardUrl = "https://mysterious-island-25360.herokuapp.com/?id=" + `${this.props.card._id}`
         return (
-            <a href="" className="card-link">
+            <a href={{cardUrl}} className="card-link">
                 <div className="card-body">
                     <div className="card-img">
                         <img src={this.props.card.image} 
