@@ -2,7 +2,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const request = require('request');
+
 var app = express()
+<<<<<<< HEAD
 var db = require('./db.js');
 var User = require('./db.js').User;
 app.use(express.static(__dirname + '/'));
@@ -12,10 +14,29 @@ var config = require('./config');
 // var AuthController = require('./auth/AuthController');
 // app.use('/api/auth', AuthController);
 // module.exports = app;
+=======
+// var db = require('./db.js');
+
+
+
+
+// var db = mongoose.connection;
+// db.on('error', console.error.bind(console, 'connection error:'));
+// db.once('open', function() {
+//  console.log(" we're connected");
+// });
+
+app.use(express.static(__dirname + '/client/src/dist'));
+// app.use(express.static(__dirname + '/client/src/components'));
+
+// const App = require("./db.js").App
+
+>>>>>>> 6eb9101e9bf6f2b848017ac2041c6e0711eca04e
 app.use(bodyParser.urlencoded({ extended: false })); 
 app.use(bodyParser.json()); 
 
 
+<<<<<<< HEAD
 app.post('/register', function(req, res) {
     //const body = JSON.parse(req.body)
     var hashedPassword = bcrypt.hashSync(req.body.password, 8);
@@ -60,6 +81,14 @@ app.post('/register', function(req, res) {
     new_user.save()
     .then(user => res.json(user))
     .catch(err => console.log(err))
+=======
+// app.get ('/processFromData', (req, res) => {
+//   res.send('Hello from Header server');
+// }); 
+app.get ('/app', (req, res) => {
+
+  res.send('Hello from Header server');
+>>>>>>> 6eb9101e9bf6f2b848017ac2041c6e0711eca04e
 });
 
 

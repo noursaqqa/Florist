@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const URI = "mongodb+srv://nours:nour1236@floristcluster-riqdf.mongodb.net/florist?retryWrites=true&w=majority"
@@ -60,3 +61,23 @@ let saveuser = (user) => {
 }
 
 module.exports={Flower, User, save, saveuser};
+=======
+// const mongoose = require  ("mongoose");
+// const Schema = mongoose.Schema;
+
+// const app = new Schema ({
+
+// })
+
+// const App = mongoose.model("app", app);
+
+// // app.save((error, result) => {
+// //     if(error) {
+// //         console.log("app error", error)
+// //     } else {
+// //         console.log("app saved")
+// //     }
+// // })
+
+// module.exports.App = App;
+>>>>>>> 6eb9101e9bf6f2b848017ac2041c6e0711eca04e
