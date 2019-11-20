@@ -19,17 +19,18 @@ class Flowers4003 extends React.Component {
     var path = window.location.href;
     console.log(path);
     var productInformationID = path.substring(path.indexOf("=") + 1);
-    if (productInformationID === "") {
-      productInformationID = 1;
-    }
+    // if (productInformationID === "") {
+    //   productInformationID = 1;
+    // }
+    console.log("id======" + productInformationID);
     $.ajax({
       type: "GET",
       url: "/id/?id=" + productInformationID,
       success: function(data) {
         console.log(data);
         that.setState({
-          id: data.id,
-          productInformation: data.productInformation
+          id: data._id,
+          productInformation: data.productifo
         });
         console.log(that.state);
       },
