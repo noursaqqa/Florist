@@ -1,4 +1,4 @@
-#9FE540 order-header .order-container {
+.order-container {
   position: relative;
   min-height: 1px;
   max-width: 580px;
@@ -8,7 +8,6 @@
   font-family: "Avenir", "Helvetica", "Arial", "sans-serif";
   float: right;
 }
-
 .rowAll {
   max-width: 1130px;
   margin: 0 auto;
@@ -281,7 +280,7 @@ div.ui-menu li {
 }
 
 .up {
-  margin-top: -390px;
+  margin-top: -250px;
   width: 560;
 }
 
@@ -427,9 +426,7 @@ h4 {
   margin: 5;
   vertical-align: middle;
 }
-.up {
-  /* margin-top: -15px; */
-}
+
 /* here are new css  */
 #pokname {
   margin-top: 5%;
@@ -483,8 +480,3 @@ h4 {
 #allheadercomponents {
   display: grid;
 }
-#logoimg {
-  width: 10px;
-  height: 10px;
-}
-.company-logo
