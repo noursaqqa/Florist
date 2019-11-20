@@ -48,7 +48,7 @@ this["require"] =
   \******************************/
 /***/ (function(module, exports) {
 
-	'use strict';
+	"use strict";
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
@@ -57,6 +57,190 @@ this["require"] =
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	// class App extends React.Component {
+	//   constructor(props) {
+	//     super(props);
+	//     this.state = {
+	//       id: "",
+	//       name: "",
+	//       price1: "",
+	//       price2: "",
+	//       price3: ""
+	//       // productName: '',
+	//     };
+	
+	//     // this.getInfo = this.getInfo.bind(this);
+	//     // this.updateState = this.updateState.bind(this);
+	//   }
+	//   // updateState(data) {
+	//   //   this.setState({
+	//   //     dataItem: data
+	//   //   });
+	
+	//   // }
+	//   componentDidMount() {
+	//     var that = this;
+	//     // this.getInfo();
+	//     var path = window.location.href;
+	//     console.log(path);
+	//     var price1Id = path.substring(path.indexOf("=") + 1);
+	//     if (price1Id === "") {
+	//       price1Id = 1;
+	//     }
+	//     $.ajax({
+	//       type: "GET",
+	//       url: "/id/?id=" + price1Id,
+	//       success: function(data) {
+	//         console.log(data);
+	//         that.setState({
+	//           id: data.id,
+	//           name: data.name,
+	//           price1: data.price1,
+	//           price2: data.price2,
+	//           price3: data.price3
+	//         });
+	//         console.log(that.state);
+	//       },
+	//       error: function(_request, _status, error) {
+	//         console.log(error);
+	//       }
+	//     });
+	//   }
+	
+	//   changeType(e) {
+	//     e.target.type = "date";
+	//   }
+	//   changeingone(e) {
+	//     console.log(this.state.name);
+	
+	//     e.target.style =
+	//       "box-shadow: inset 2px 2px #548f35, inset -2px -2px #548f35;";
+	//     $("#descrip").text("Bouquet will be delivered approximately as pictured.");
+	//     $("#h4").text("$" + this.state.price1);
+	//   }
+	//   changeingtwo() {
+	//     $("#descrip").text(
+	//       "Additional flowers will be added to enhance the bouquet."
+	//     );
+	//     $("#h4").text("$" + this.state.price2);
+	//   }
+	//   changeingthree() {
+	//     $("#h4").text("$" + this.state.price3);
+	//     $("#descrip").text(
+	//       "We will add more blooms and select the highest quality flowers we offer in this style."
+	//     );
+	//   }
+	//   render() {
+	//     // if(this.state. !==  0){
+	//     //  var  myData =this.state;
+	//     // }
+	//     return (
+	//       <form id="orderform">
+	//         <div className=" up float  order-container col-xs-12 col-sm-6 col-md-6">
+	//           <div>
+	//             <h1 class="order-header" id="pokname" name="name">
+	//               {this.state.name}
+	//             </h1>
+	//             <br />
+	//             <div class="orderForm-arrangement_size">
+	//               <div className="text-align paddingBut">
+	//                 <h4
+	//                   class=" orderForm-price modification_price js-price"
+	//                   id="h4"
+	//                 >
+	//                   ${this.state.price1}
+	//                 </h4>
+	//                 <div
+	//                   className=" btn btn-large btn-order-size btn-order-size--standard col-xs-4 col-sm-4 col-md-4 col-lg-4 js-btnOrderSize"
+	//                   class="up-sell-list options-list price-size-box clearfix"
+	//                 >
+	//                   <button
+	//                     className="btn"
+	//                     name=" price1"
+	//                     id="standard"
+	//                     onClick={this.changeingone.bind(this)}
+	//                   >
+	//                     Standard{" "}
+	//                   </button>
+	//                   <button
+	//                     className="btntwo btn"
+	//                     name=" price2"
+	//                     id="deluxe"
+	//                     onClick={this.changeingtwo.bind(this)}
+	//                   >
+	//                     Deluxe{" "}
+	//                   </button>
+	//                   <button
+	//                     className="btntwo btn"
+	//                     name=" price3"
+	//                     id="premium"
+	//                     onClick={this.changeingthree.bind(this)}
+	//                   >
+	//                     Premium
+	//                   </button>
+	//                 </div>
+	//               </div>
+	//             </div>
+	//           </div>
+	//           {/* //////////////// */}
+	//           <div className="devdes">
+	//             <div id="i">
+	//               {/* <div style={{padding:15,textAlign:"center",color:"#8E8E8E"}}> */}
+	//               <div className="up-sell" id="descrip">
+	//                 <div id="hea">
+	//                   <div>
+	//                     <img
+	//                       className=" pickup-only-icon"
+	//                       src="https://i.ibb.co/SNd267P/hear.png"
+	//                     />
+	//                     <br />
+	//                   </div>
+	//                   <div>
+	//                     <br />
+	//                     Bouquet will be delivered approximately as pictured.
+	//                   </div>
+	//                 </div>
+	//               </div>
+	//             </div>
+	//             <br></br>
+	
+	//             <div className="up-selll">
+	//               <img
+	//                 className=" pickup-only-icon"
+	//                 src="https://i.ibb.co/ZcvTWfz/truck.png"
+	//               />
+	//               <br />
+	//               <div>
+	//                 <br />
+	//                 Add a zip code for delivery details
+	//               </div>
+	//             </div>
+	//           </div>
+	//           <br></br>
+	//           <br></br>
+	//           <div className="dates">
+	//             <span>
+	//               <input
+	//                 className="inputs"
+	//                 placeholder="CHOOSE A DELIVERY DATE"
+	//                 type="text"
+	//                 onFocus={this.changeType.bind(this)}
+	//               />
+	//             </span>
+	//           </div>
+	//           <div className="dates">
+	//             <button className="colorbtn">Order Now</button>
+	//           </div>
+	//         </div>
+	
+	//         <div></div>
+	//       </form>
+	//     );
+	//   }
+	// }
+	
+	// ReactDOM.render(<App />, document.getElementById("Flowers4002"));
 	
 	var App = function (_React$Component) {
 	  _inherits(App, _React$Component);
@@ -67,11 +251,11 @@ this["require"] =
 	    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 	
 	    _this.state = {
-	      id: '',
-	      name: '',
-	      price1: '',
-	      price2: '',
-	      price3: ''
+	      id: "",
+	      name: "",
+	      price1: "",
+	      price2: "",
+	      price3: ""
 	      // productName: '',
 	    };
 	
@@ -88,7 +272,7 @@ this["require"] =
 	
 	
 	  _createClass(App, [{
-	    key: 'componentDidMount',
+	    key: "componentDidMount",
 	    value: function componentDidMount() {
 	      var that = this;
 	      // this.getInfo();
@@ -109,7 +293,6 @@ this["require"] =
 	            price1: data.price1,
 	            price2: data.price2,
 	            price3: data.price3
-	
 	          });
 	          console.log(that.state);
 	        },
@@ -122,16 +305,15 @@ this["require"] =
 	    // getInfo() {
 	    // var that = this;
 	
-	
 	    // }
 	
 	  }, {
-	    key: 'changeType',
+	    key: "changeType",
 	    value: function changeType(e) {
 	      e.target.type = "date";
 	    }
 	  }, {
-	    key: 'changeingone',
+	    key: "changeingone",
 	    value: function changeingone(e) {
 	      console.log(this.state.name);
 	
@@ -140,106 +322,163 @@ this["require"] =
 	      $("#h4").text("$" + this.state.price1);
 	    }
 	  }, {
-	    key: 'changeingtwo',
+	    key: "changeingtwo",
 	    value: function changeingtwo() {
 	      $("#descrip").text("Additional flowers will be added to enhance the bouquet.");
 	      $("#h4").text("$" + this.state.price2);
 	    }
 	  }, {
-	    key: 'changeingthree',
+	    key: "changeingthree",
 	    value: function changeingthree() {
 	      $("#h4").text("$" + this.state.price3);
 	      $("#descrip").text("We will add more blooms and select the highest quality flowers we offer in this style.");
 	    }
 	  }, {
-	    key: 'render',
+	    key: "render",
 	    value: function render() {
-	
 	      // if(this.state. !==  0){
 	      //  var  myData =this.state;
 	      // }
 	      return React.createElement(
-	        'div',
+	        "div",
 	        null,
 	        React.createElement(
-	          'div',
-	          { className: ' up float  order-container col-xs-12 col-sm-6 col-md-6' },
+	          "div",
+	          { className: " up float  order-container col-xs-12 col-sm-6 col-md-6" },
 	          React.createElement(
-	            'div',
-	            { id: 'orderForm' },
+	            "div",
+	            { id: "orderForm" },
 	            React.createElement(
-	              'h1',
-	              { 'class': 'order-header', name: 'name' },
+	              "h1",
+	              { "class": "order-header", name: "name" },
 	              this.state.name
 	            ),
-	            React.createElement('br', null),
+	            React.createElement("br", null),
 	            React.createElement(
-	              'div',
-	              { 'class': 'orderForm-arrangement_size' },
+	              "div",
+	              { "class": "orderForm-arrangement_size" },
 	              React.createElement(
-	                'div',
-	                { className: 'text-align paddingBut' },
+	                "div",
+	                { className: "text-align paddingBut" },
 	                React.createElement(
-	                  'h4',
-	                  { 'class': ' orderForm-price modification_price js-price', id: 'h4' },
-	                  '$',
+	                  "h4",
+	                  { "class": " orderForm-price modification_price js-price" },
+	                  "$",
 	                  this.state.price1
 	                ),
 	                React.createElement(
-	                  'div',
-	                  { className: ' btn btn-large btn-order-size btn-order-size--standard col-xs-4 col-sm-4 col-md-4 col-lg-4 js-btnOrderSize', 'class': 'up-sell-list options-list price-size-box clearfix' },
+	                  "div",
+	                  {
+	                    id: "btnscontin"
+	                    // className=" btn btn-large btn-order-size btn-order-size--standard col-xs-4 col-sm-4 col-md-4 col-lg-4 js-btnOrderSize"
+	                    // class="up-sell-list options-list price-size-box clearfix"
+	                  },
 	                  React.createElement(
-	                    'button',
-	                    { className: 'btn', name: ' price1', id: 'standard', onClick: this.changeingone.bind(this) },
-	                    'Standard '
+	                    "button",
+	                    {
+	                      className: "btn",
+	                      name: " price1",
+	                      id: "standard",
+	                      onClick: this.changeingone.bind(this)
+	                    },
+	                    "Standard",
+	                    " "
 	                  ),
 	                  React.createElement(
-	                    'button',
-	                    { className: 'btntwo btn', name: ' price2', id: 'deluxe', onClick: this.changeingtwo.bind(this) },
-	                    'Deluxe   '
+	                    "button",
+	                    {
+	                      className: "btntwo btn",
+	                      name: " price2",
+	                      id: "deluxe",
+	                      onClick: this.changeingtwo.bind(this)
+	                    },
+	                    "Deluxe",
+	                    " "
 	                  ),
 	                  React.createElement(
-	                    'button',
-	                    { className: 'btntwo btn', name: ' price3', id: 'premium', onClick: this.changeingthree.bind(this) },
-	                    'Premium'
+	                    "button",
+	                    {
+	                      className: "btntwo btn",
+	                      name: " price3",
+	                      id: "premium",
+	                      onClick: this.changeingthree.bind(this)
+	                    },
+	                    "Premium"
 	                  )
 	                )
 	              )
 	            )
 	          ),
 	          React.createElement(
-	            'div',
-	            { className: 'devdes' },
+	            "div",
+	            { className: "devdes" },
 	            React.createElement(
-	              'div',
-	              { className: 'up-sell', id: 'descrip' },
-	              'Bouquet will be delivered approximately as pictured.'
+	              "div",
+	              { id: "i" },
+	              React.createElement(
+	                "div",
+	                { className: "up-sell", id: "descrip" },
+	                React.createElement(
+	                  "div",
+	                  { id: "hea" },
+	                  React.createElement(
+	                    "div",
+	                    null,
+	                    React.createElement("img", {
+	                      className: " pickup-only-icon",
+	                      src: "https://i.ibb.co/SNd267P/hear.png"
+	                    }),
+	                    React.createElement("br", null)
+	                  ),
+	                  React.createElement(
+	                    "div",
+	                    null,
+	                    React.createElement("br", null),
+	                    "Bouquet will be delivered approximately as pictured."
+	                  )
+	                )
+	              )
 	            ),
-	            React.createElement('br', null),
+	            React.createElement("br", null),
 	            React.createElement(
-	              'div',
-	              { className: 'up-selll' },
-	              'Add a zip code for delivery details'
+	              "div",
+	              { className: "up-selll" },
+	              React.createElement("img", {
+	                className: " pickup-only-icon",
+	                src: "https://i.ibb.co/ZcvTWfz/truck.png"
+	              }),
+	              React.createElement("br", null),
+	              React.createElement(
+	                "div",
+	                null,
+	                React.createElement("br", null),
+	                "Add a zip code for delivery details"
+	              )
 	            )
 	          ),
-	          React.createElement('br', null),
-	          React.createElement('br', null),
+	          React.createElement("br", null),
+	          React.createElement("br", null),
 	          React.createElement(
-	            'div',
-	            { className: 'dates' },
-	            React.createElement('input', { className: 'inputs', placeholder: 'CHOOSE A DELIVERY DATE', type: 'text', onFocus: this.changeType.bind(this) })
+	            "div",
+	            { className: "dates" },
+	            React.createElement("input", {
+	              className: "inputs",
+	              placeholder: "CHOOSE A DELIVERY DATE",
+	              type: "text",
+	              onFocus: this.changeType.bind(this)
+	            })
 	          ),
 	          React.createElement(
-	            'div',
-	            { className: 'dates' },
+	            "div",
+	            { className: "dates" },
 	            React.createElement(
-	              'button',
-	              { className: 'colorbtn' },
-	              'Order Now'
+	              "button",
+	              { className: "colorbtn" },
+	              "Order Now"
 	            )
 	          )
 	        ),
-	        React.createElement('div', null)
+	        React.createElement("div", null)
 	      );
 	    }
 	  }]);
@@ -247,7 +486,7 @@ this["require"] =
 	  return App;
 	}(React.Component);
 	
-	ReactDOM.render(React.createElement(App, null), document.getElementById('Flowers4002'));
+	ReactDOM.render(React.createElement(App, null), document.getElementById("Flowers4002"));
 
 /***/ })
 /******/ ]);

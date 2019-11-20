@@ -58,6 +58,7 @@ let saveuser = (user) => {
 }
 
 const ShoppingSchema = Schema ({ //
+  name: {type: String},
   image:{type: String},
   name:{type: String},
   pricetype:{type: String},

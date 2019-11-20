@@ -6,19 +6,20 @@ var app = express()
 var db = require('./database/data.js');
 var db = require('./database/data.js');
 
-app.use(express.static(__dirname + '/'));
+app.use(express.static('./client/src/dist'));
 
 app.use(bodyParser.urlencoded({ extended: false })); 
 app.use(bodyParser.json()); 
 
 
 app.get ('/', (req, res) => {
-  res.send('Hello from Header server');
+  res.send('Hello from Mainbody server');
 });
 
-app.get ('/flower', (req,res) => {
+app.get ('/cards', (req,res) => {
     db.Flower
           .find({})
+          .limit(16)
           .exec((err,data) => { 
         if(err){
           console.log(err);
@@ -55,4 +56,4 @@ app.get ('/cart', (req,res) => {
 
 
 app.listen(process.env.PORT || 1300); 
-console.log('We dance on port', 1300);
+console.log('Partying on port', 1300);
