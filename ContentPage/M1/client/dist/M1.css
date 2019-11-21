@@ -13,7 +13,9 @@
 
 
 
+
  */
+
 .order-container {
   position: relative;
   min-height: 1px;
@@ -60,20 +62,6 @@ h4 {
   padding: 6px 12px;
 }
 
-/*.bigblue {
-    color: DodgerBlue;
-    padding: 40px;
-    font-family: Arial;
-    text-align: center;
-  } 
-.Ula{
-    color: red;
-}
-body{
-    background-color: "aqua";
-
-    
-} */
 .productInfo-item {
   background-color: #fff;
   color: #444;
@@ -167,8 +155,8 @@ p {
 }
 */
 .row {
-  max-width: 550px;
-  margin: 0 auto;
+  max-width: 45%;
+  margin-left: 5%;
   float: left;
 }
 
@@ -205,17 +193,14 @@ p {
   letter-spacing: 0 !important;
 }
 
-.header-nav {
-  background: #87c75f;
-  width: 100%;
-  min-height: 50px;
-}
 .company-logo img {
   margin: -10px auto 10px auto;
   display: block;
   /* margin-left: 420; */
   margin-top: 5;
   max-width: 280px;
+  height: 150px;
+
 }
 .clearfix {
   display: flex;
@@ -259,11 +244,6 @@ div.ui-menu li {
   background: #efefef;
   width: 50%;
 }
-#active-image_gallery-image {
-  background: #efefef;
-  width: 40%;
-  margin-left: 65px;
-}
 
 #orderForm .orderForm-arrangement_size {
   background: #f7f7f7 !important;
@@ -295,10 +275,20 @@ div.ui-menu li {
   font-family: "Times", "Times New Roman", "serif";
   font-weight: 100;
 }
+.header-nav {
+  background: #87c75f;
+  width: 100%;
+  height: 10%;
+  min-height: 50px;
+  font-size: 26px;
+  margin-top: 1%;
+  font-size: 20px;
 
+}
 .up {
-  margin-top: -390px;
-  width: 560;
+  margin-top: -15%;
+  width: 45%;
+  height: 55%;
 }
 
 .firsting {
@@ -496,3 +486,56 @@ h4 {
   display: inline;
   margin-left: 45%;
 }
+
+#dropbtn {
+  background-color: #ffffff;
+  color: rgb(3, 3, 3);
+  padding: 16px;
+  font-size: 20px;
+  border: none;
+}
+
+#dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+#dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+#dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 20px;
+}
+
+#dropdown-content a:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+#dropdown:hover #dropdown-content {
+  display: block;
+}
+
+#dropdown:hover #dropbtn {
+  background-color: #fdfffd;
+}
+#carticon {
+  background: #ffb89a;
+}
+#active-image_gallery-image {
+  height: 50%;
+  background: #efefef;
+  width: 45%;
+  margin-left: 7%;
+  margin-top: 5%;
+}
+.header-nav

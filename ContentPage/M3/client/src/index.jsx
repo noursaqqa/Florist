@@ -8,10 +8,6 @@ class Flowers4003 extends React.Component {
       id: "",
       productInformation: ""
     };
-    // this.getInfo();
-    // this.getInfo = this.getInfo.bind(this);
-
-    // this.updateState = this.updateState.bind(this);
   }
   componentDidMount() {
     var that = this;
@@ -42,7 +38,6 @@ class Flowers4003 extends React.Component {
     console.log("inside getInfo M3");
     return (
       <div>
-     
         <div className="productView row">
           <div className="productInfo-item productInfo-description text-align col-xl-12">
             <div className="display">
@@ -70,22 +65,23 @@ class Flowers4003 extends React.Component {
           <div className="productInfo-item row productInfo-description col-xl-12">
             <h3>Product Information</h3>
             <div className=" product-description--mobile js-description">
-         <p>{this.state.productInformation}</p>         
+              <p>{this.state.productInformation}</p>
             </div>
           </div>
-          <div className= "sub">
-          <div className="item description  col-xl-12">
-            <h3>Substitution Policy</h3>
-            <div className="product-description--mobile js-description">
-              <p>
-                A horn of corn has been born! We all love popcorn. Corn mazes
-                delight and amuse us. We eat corn syrup. Corn is a part of all
-                of our lives. This Thanksgiving, say “thanks” to corn with this
-                beautiful seasonal centerpiece. Cornbread, ears of corn, and a
-                Cornucopia Utopia! That is what Thanksgiving is all about. And
-                turkey, that’s important too.
-              </p>
-            </div></div>
+          <div className="sub">
+            <div className="item description  col-xl-12">
+              <h3>Substitution Policy</h3>
+              <div className="product-description--mobile js-description">
+                <p>
+                  A horn of corn has been born! We all love popcorn. Corn mazes
+                  delight and amuse us. We eat corn syrup. Corn is a part of all
+                  of our lives. This Thanksgiving, say “thanks” to corn with
+                  this beautiful seasonal centerpiece. Cornbread, ears of corn,
+                  and a Cornucopia Utopia! That is what Thanksgiving is all
+                  about. And turkey, that’s important too.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
