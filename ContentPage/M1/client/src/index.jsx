@@ -16,7 +16,7 @@ class Flowers4001 extends React.Component {
     console.log(path);
     var imgId = path.substring(path.indexOf("=") + 1);
     if (imgId === "") {
-      imgId = 1;
+      imgId = "5dd407e51c9d440000311aec";
     }
     console.log(imgId);
     $.ajax({
