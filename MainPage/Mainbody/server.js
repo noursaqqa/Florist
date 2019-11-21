@@ -3,8 +3,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const request = require('request');
 var app = express()
-var db = require('./database/data.js.js');
-var db = require('./database/data.js.js');
+var db = require('./database/data.js');
 
 app.use(express.static('./client/src/dist'));
 
