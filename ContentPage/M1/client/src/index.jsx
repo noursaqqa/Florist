@@ -11,6 +11,10 @@ class Flowers4001 extends React.Component {
   }
 
   componentDidMount() {
+    this.retrieveData();
+  }
+
+  retrieveData() {
     var that = this;
     var path = window.location.href;
     console.log(path);
@@ -23,8 +27,6 @@ class Flowers4001 extends React.Component {
       type: "GET",
       url: "/id/?id=" + imgId,
       success: function(data) {
-        console.log("dvdvdvdv");
-        console.log(data);
         that.setState({
           image: data.image,
           id: data._id
@@ -72,7 +74,6 @@ class Flowers4001 extends React.Component {
               </svg>
             </span>
           </div>
-          {/* </div>{" "} */}
         </section>
         <div className="displayUl header-nav col-md-12">
           <div className="navigation ui-menu">

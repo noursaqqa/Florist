@@ -91,6 +91,11 @@
 	  _createClass(Flowers4001, [{
 	    key: "componentDidMount",
 	    value: function componentDidMount() {
+	      this.retrieveData();
+	    }
+	  }, {
+	    key: "retrieveData",
+	    value: function retrieveData() {
 	      var that = this;
 	      var path = window.location.href;
 	      console.log(path);
@@ -103,8 +108,6 @@
 	        type: "GET",
 	        url: "/id/?id=" + imgId,
 	        success: function success(data) {
-	          console.log("dvdvdvdv");
-	          console.log(data);
 	          that.setState({
 	            image: data.image,
 	            id: data._id
