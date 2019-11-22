@@ -1,19 +1,10 @@
-<<<<<<< HEAD
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const request = require('request');
 var app = express()
 var db = require('./database/data.js');
-=======
-const express = require("express");
-const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
-const request = require("request");
-var app = express();
-var db = require("./database/data.js");
-var db = require("./database/data.js");
->>>>>>> a5b7bcb44dc0563a6b463d7acc0c20115cdfd6ca
+
 
 app.use(express.static("./client/src/dist"));
 
