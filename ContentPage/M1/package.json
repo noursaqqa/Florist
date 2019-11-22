@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "dev-react": "webpack -d --watch"
+    "dev-react": "webpack -d --watch",
+    "serverm": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
