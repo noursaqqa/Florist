@@ -6,7 +6,7 @@ class Flowers4001 extends React.Component {
     super(props);
     this.state = {
       image: "",
-      id:""
+      id: ""
     };
   }
 
@@ -16,7 +16,8 @@ class Flowers4001 extends React.Component {
     console.log(path);
     var imgId = path.substring(path.indexOf("=") + 1);
     if (imgId === "") {
-      imgId = 1;
+      imgId = "5dd40c75429bd63d3493977e";
+      //
     }
     console.log(imgId);
     $.ajax({
