@@ -2,7 +2,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const request = require('request');
-
 var app = express()
 // var db = require('./db.js');
 
@@ -51,6 +50,10 @@ app.get('/me', function(req, res) {
     });
   });
 });  
+
+app.get('/',function(req,res){
+  res.send("hello")
+})
 
 
 app.listen(process.env.PORT || 1200); 
