@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "react-dev": "webpack -d --watch",
-    "serverh": "nodemon server.js"
+    "serverh": "nodemon server.js",
+    "transpile": "babel src/index.js --out-file src/index-transpiled.js"
   },
   "author": "",
   "license": "ISC",
@@ -23,6 +24,7 @@
     "nodemon": "^1.19.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
     "request": "^2.88.0"
   },
   "devDependencies": {
