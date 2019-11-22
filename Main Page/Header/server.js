@@ -24,9 +24,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json()); 
 
 
-// app.get ('/processFromData', (req, res) => {
-//   res.send('Hello from Header server');
-// }); 
+app.get ('/SignUpForm', (req, res) => {
+  res.send('Hello from Header server');
+}); 
+app.post ('SignUpForm', function(req, res) {
+  var SignUpForm = req.body.signUpForm;
+
+})
 app.get ('/app', (req, res) => {
 
   res.send('Hello from Header server');
