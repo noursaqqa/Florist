@@ -17,10 +17,10 @@ app.get("/flower", (req, res) => {
 });
 
 app.get('/id', function (req, res) {
-  var n = req.query._id;
+  var n = req.query.id;
   console.log(n);
 
-  db.Flower.findOne({id: n },(err,data) => {
+  db.Flower.findOne({_id: n},(err,data) => {
    if(err){
      console.log("error",err);
    }
@@ -38,5 +38,5 @@ app.use((req, res, next) => {
  
 app.listen(port, function() {
  console.log("hi from 4005");
- console.log("lestining from 4005");
+ console.log("listening from 4005");
 });
