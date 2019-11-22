@@ -54,9 +54,10 @@ class LoginForm extends Component {
          <Link to={'/SignUpForm'}>
            <button role="Link">Sign Up</button>
          </Link>
-            {/* <button >
-            <a href="/SignUpForm">SignUp</a>
-          </button> */}
+         <br/>
+         <br/>
+
+
        
        </div>
        </form>

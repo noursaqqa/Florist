@@ -1,10 +1,13 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+ 
+
 
 class Logo extends React.Component {
   render() {
     console.log("hiiii");
     return (
-      <div>
+      <div className="forms">
         <section id="#header">
           {/* <div className="row header-innerContainer "> */}
           <div className=" clearfix company-logo ">
@@ -28,7 +31,10 @@ class Logo extends React.Component {
               <span id="dropdown">
                 <button id="dropbtn">My Account </button>
                 <div id="dropdown-content">
-                  <a className="anch" href="#">
+
+                <Link to={'/LoginForm'}>
+                  <a role="Link" className="anch" >
+
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       xmlns='xlink="http://www.w3.org/1999/xlink"'
@@ -41,7 +47,10 @@ class Logo extends React.Component {
                     </svg>{" "}
                     log in
                   </a>
-                  <a className="anch" href="#">
+                  </Link>
+
+                <Link to={'/SignUpForm'}>
+                  <a role="Link" className="anch" >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       xmlns='xlink="http://www.w3.org/1999/xlink"'
@@ -54,6 +63,8 @@ class Logo extends React.Component {
                     </svg>{" "}
                     sign up
                   </a>
+                  </Link>
+
                   <a className="anch" href="#">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
