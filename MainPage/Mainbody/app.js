@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/cards", (req, res) => {
-  console.log(req.query)
+  // console.log(req.query)
   var n = req.query.id;
   if(!n) {
     db.Flower.find({})

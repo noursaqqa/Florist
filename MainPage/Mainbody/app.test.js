@@ -1,6 +1,13 @@
 const request = require('supertest');
 const app = require('./app.js');
+const mongoose = require('mongoose')
+const databaseName = 'floristTest'
 
+
+beforeAll(async () => {
+    const url = `mongodb://127.0.0.1/${databaseName}`
+    await mongoose.connect(url, { useNewUrlParser: true })
+})
 
 //check root 
 describe('Test the root path', () => {
