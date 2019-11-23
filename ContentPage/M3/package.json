@@ -6,8 +6,8 @@
   "scripts": {
     "test": "jest",
     "start": "node server.js",
-    "serverm3": "nodemon server.js",
-    "react-dev": "webpack -d --watch"
+    "react-dev": "webpack -d --watch",
+    "serveru": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
