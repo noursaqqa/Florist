@@ -11,7 +11,6 @@ const Welcome = ({user, mainPage})=> {
   )
 }
 
-
 class SignUpForm extends Component {
   
  constructor(props){
