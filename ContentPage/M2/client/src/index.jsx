@@ -13,6 +13,9 @@ class App extends React.Component {
     // this.getInfo = this.getInfo.bind(this);
     // this.updateState = this.updateState.bind(this);
   }
+  orderNow(){
+  alert("add to cart")
+  }
   // updateState(data) {
   //   this.setState({
   //     dataItem: data
@@ -118,7 +121,7 @@ class App extends React.Component {
   </div>
   <div className ="dates">
   
-  <button className="colorbtn" >Order Now</button>
+  <button className="colorbtn" onClick="" >Order Now</button>
   </div >
   
   

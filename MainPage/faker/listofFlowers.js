@@ -18,5 +18,5 @@ for(var i = 0; i < 100; i++){
     productifo: faker.commerce.productAdjective()
   });
   console.log(item);
-  // /item.save();
+  item.save();
 }
